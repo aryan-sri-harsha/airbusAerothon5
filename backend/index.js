@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const sigupModal = require("./modals/signup");
 const aircraftParts = require("./modals/aircraftsParts");
+const listingsModal = require("./modals/listings");
 var collection ;
 mongoose.set('strictQuery', true);
 mongoose
@@ -74,9 +75,39 @@ app.post("/login", (req, res) => {
             console.log("working");
         }
     })
-    
-    
 
+  })
+
+
+  app.get("/listing/your/:username",(req,res)=>{
+    listingsModal.find({ userName: req.params.username }).exec((err, data) => {
+        if(!err) {
+            res.send(data)
+            console.log("working");
+        }
+    })
+  })
+  app.get("/listing/:to",(req,res)=>{
+    listingsModal.find({ to: parseInt(req.params.to) }).exec((err, data) => {
+        if(!err) {
+            res.send(data)
+            console.log("working");
+        }
+    })
+  })
+
+  app.post("/listing",(req,res)=>{
+    const obj = req.body;
+  const objL = req.body.userName;
+      var newUser = new listingsModal(obj);
+      newUser.save((err, user) => {
+        if (err){
+            res.send({error : 1})  
+            return console.log("err");
+        }
+        res.send({ ...user,error : 1});
+      });
+    
   })
 
 const port = process.env.PORT || 5000;
