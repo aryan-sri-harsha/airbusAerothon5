@@ -61,7 +61,7 @@ app.post("/login", (req, res) => {
             return;
         }
         else if (docs[0].password !== req.body.password) response.mismatch = 1;
-        res.send({...response, type : docs[0].type});
+        res.send({...response, type : parseInt(docs[0].type)});
         console.log("login clicked");
       }
     });
@@ -91,7 +91,7 @@ app.post("/login", (req, res) => {
     listingsModal.find({ to: parseInt(req.params.to) }).exec((err, data) => {
         if(!err) {
             res.send(data)
-            console.log("working");
+            console.log(data);
         }
     })
   })

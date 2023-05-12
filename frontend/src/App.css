@@ -1,0 +1,86 @@
+.post {
+  width: 80vw;
+  height: 50vh;
+  color: aliceblue;
+  background-color: black;
+  border-radius: 5%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.welcome {
+  text-align: center;
+  background-image: url(./img/abstract-blue-extruded-voronoi-blocks-background-minimal-light-clean-corporate-wall-3d-geometric-surface-illustration-polygonal-elements-displacement.jpg);
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+}
+.fill {
+  width: 100%;
+  background-color: beige;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.fill-1 {
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: beige;
+  background-size: auto;
+}
+textarea {
+  resize: none;
+}
+.App {
+  text-align: center;
+  background-image: url(./img/abstract-blue-extruded-voronoi-blocks-background-minimal-light-clean-corporate-wall-3d-geometric-surface-illustration-polygonal-elements-displacement.jpg);
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.App input{
+  width: 30%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
