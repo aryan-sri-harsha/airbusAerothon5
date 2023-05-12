@@ -15,4 +15,4 @@ MERN
  * Redirect to within the frontend folder and run:\
  `npm start`
 
-Open _localhost:3000_ in the browser
+Open [localhost:3000](http://localhost:3000/) in the browser
