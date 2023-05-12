@@ -6,6 +6,7 @@ Date: 13/05/2023
 ## Problem Statement
 
 Develop a platform or solution that connects aircraft manufacturers, airlines, and recycling facilities to facilitate the repurposing and recycling of end-of-life aircraft components
+
 ## Tech Stack Used
 MERN
 
@@ -22,3 +23,15 @@ MERN
  `npm start`
 
 1. Open [localhost:3000](http://localhost:3000/) in the browser
+
+## Usecase Diagrams
+
+![Database ER diagram (crow's foot) - Database ER diagram (crow's foot)](https://github.com/aryan-sri-harsha/airbusAerothon5/assets/67188124/c4995768-6d53-4684-ae28-e5e05c6731fb)
+
+The above diagram is a class diagram that helps us understand the relationship between the various classes present in the solution 
+
+## ER Diagrams
+
+![er](https://github.com/aryan-sri-harsha/airbusAerothon5/assets/67188124/a4220285-cb0b-4e61-92af-561e408b59fb)
+
+The above diagram helps understand the entities and their relationships as represented in the database
