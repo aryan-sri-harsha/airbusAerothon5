@@ -7,6 +7,15 @@ Date: 13/05/2023
 
 Develop a platform or solution that connects aircraft manufacturers, airlines, and recycling facilities to facilitate the repurposing and recycling of end-of-life aircraft components
 
+## Our solution
+
+Cloud based platform that has 3 separate logins for the three possible actors:
+* Aircraft Manufacturer
+* Airlines
+* Recycling facility
+
+Upon Signing up and then logging in, you are redirected to 
+
 ## Tech Stack Used
 MERN
 
