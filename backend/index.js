@@ -5,10 +5,11 @@ const mongoose = require("mongoose");
 const sigupModal = require("./modals/signup");
 const aircraftParts = require("./modals/aircraftsParts");
 const listingsModal = require("./modals/listings");
+const bcrypt = require("bcrypt")
 var collection ;
 mongoose.set('strictQuery', true);
 mongoose
-  .connect("mongodb+srv://aerothon:password@hackathon.jytl28h.mongodb.net/", { useNewUrlParser: true })
+  .connect("mongodb+srv://aerothon:aerothonlogin@hackathon.jytl28h.mongodb.net/", { useNewUrlParser: true })
   .then((data) => console.log("server is connected to mongodb"))
   .catch((err) => console.log(err));
 const app = express();
@@ -22,7 +23,7 @@ app.get("/",(req,res)=>{
 
 app.post("/signup",(req,res)=>{ 
     // already == 1 username exists, already = 2 error ,already = 0 new user added
-    const obj = req.body;
+    let obj = req.body;
   const objL = req.body.userName;
   let present = 0;
   sigupModal.find({ userName: objL }).exec((err, usr) => {
@@ -34,6 +35,12 @@ app.post("/signup",(req,res)=>{
     if (count != 0) {
       res.send({ already: 1 });
     } else {
+      bcrypt.hash(obj.password, 10)
+    .then(hash => {
+      obj = {...obj,password:hash}
+      console.log(obj)
+    })
+  .catch(err => console.error(err.message))
       var newUser = new sigupModal(obj);
       newUser.save((err, user) => {
         if (err){
@@ -60,7 +67,10 @@ app.post("/login", (req, res) => {
             res.send(response);
             return;
         }
-        else if (docs[0].password !== req.body.password) response.mismatch = 1;
+        else if (docs[0].password !== req.body.password) {
+          response.mismatch = 1;
+
+        }
         res.send({...response, type : parseInt(docs[0].type)});
         console.log("login clicked");
       }
@@ -109,6 +119,14 @@ app.post("/login", (req, res) => {
       });
     
   })
-
+  function validateUser(hash) {
+    bcrypt
+      .compare(password, hash)
+      .then(res => {
+        console.log(res) // return true
+        
+      })
+      .catch(err => console.error(err.message))        
+}
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`server is up and running on ${port}`));

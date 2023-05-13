@@ -9,6 +9,8 @@ import Data from './pages/data';
 import Account from './postsPages/Account';
 import Myposts from './postsPages/myposts';
 import AllPosts from './postsPages/allPosts';
+import Dashboard from './pages/dashboard';
+import InfoPage from './pages/product';
 function App() {
   return (
     <div >
@@ -22,15 +24,16 @@ function App() {
      <Route exact path='/signup'> 
         <Signup />
      </Route>
-      <Route exact path="/welcome/:userName/:type" children={<Welcome />}/>
+      {/* <Route exact path="/welcome/:userName/:type" children={<Welcome />}/> */}
+      <Route exact path="/welcome/:userName/:type" children={<Dashboard />}/>
       
          
-      <Route exact path="/forgetpassword">
-        <Forgetpassword />
+      <Route exact path="/dashboard">
+        <Dashboard />
       </Route>
       <Route exact path="/account/:userName" children={<Account />}/>
       <Route exact path ="/myposts/:userName" children={<Myposts />} />
-      <Route exact path ="/allposts/:userName" children={<AllPosts/>} />
+      <Route exact path ="/product/:id" children={<InfoPage/>} />
       <Redirect  path="*" to="/">
 
       </Redirect>
