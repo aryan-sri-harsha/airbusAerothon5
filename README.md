@@ -58,7 +58,7 @@ The dashboard has
 Security is maintained by adding hashin to the password before saving it to the  
 
 ### Database functionality:
-The data that was provided to us was dirty and needed formatting. Most of the formatting and cleaning was done by us manually and using excel functions, and javascript. The input data that will be provided to the deployed code in a streamlined manner will have to be formattedin case it is not formatted properly
+The data that was provided to us was dirty and needed formatting. Most of the formatting and cleaning was done by us manually and using excel functions, and javascript. The input data that will be provided to the deployed code in a streamlined manner will have to be formatted in case it is not formatted properly
 
 ## Conclusion
 
