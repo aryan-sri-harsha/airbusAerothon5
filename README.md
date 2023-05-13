@@ -51,12 +51,20 @@ We have finished the backend in Node.js and Express.js completely. The database 
 
 The following are some of the features of the code we have developed:
 
-### backend functionality:
+### Backend functionality:
 The backend has endpoints that are used to route to specific pages. 
+We have functionalities depending on the roles:
+Sign up and login is common to all, authentication included
+Searching aircraft parts is common to all, on all 3 actors' dashboards
+The option to view all listings is available on all 3 actors' dashboards
+The option to add listings is available to airlines and to recyclers, wherein the airlines post it to recyclers and recyclers post it to manufacturers.
+The option to buy from listings is also available to all user types
+
+## Frontend functionality
 There is a login page that does authentication before login. 
 If you sign up, Security is maintained by adding hashing to the password before saving it to the database 
 The dashboard has a logout option, a navbar, and the cards to represent all the available parts for sale
-The product details can be viewed
+The product details can be viewed on their respective product pages
 
 ### Database functionality:
 The data that was provided to us was dirty and needed formatting. Most of the formatting and cleaning was done by us manually and using excel functions, and javascript. The input data that will be provided to the deployed code in a streamlined manner will have to be formatted in case it is not formatted properly
