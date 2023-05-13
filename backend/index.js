@@ -9,7 +9,7 @@ const bcrypt = require("bcrypt")
 var collection ;
 mongoose.set('strictQuery', true);
 mongoose
-  .connect("mongodb+srv://aerothon:aerothonlogin@hackathon.jytl28h.mongodb.net/", { useNewUrlParser: true })
+  .connect("mongodb+srv://aerothon:password@hackathon.jytl28h.mongodb.net/", { useNewUrlParser: true })
   .then((data) => console.log("server is connected to mongodb"))
   .catch((err) => console.log(err));
 const app = express();
