@@ -14,7 +14,7 @@ Cloud based platform that has 3 separate logins for the three possible actors:
 * Airlines
 * Recycling facility
 
-Upon Signing up and then logging in, you are redirected to 
+Upon Signing up and then logging in, you are redirected to the listings available
 
 ## Tech Stack Used
 MERN
