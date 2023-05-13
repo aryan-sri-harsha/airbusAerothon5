@@ -60,7 +60,7 @@ The option to view all listings is available on all 3 actors' dashboards
 The option to add listings is available to airlines and to recyclers, wherein the airlines post it to recyclers and recyclers post it to manufacturers.
 The option to buy from listings is also available to all user types
 
-## Frontend functionality
+### Frontend functionality
 There is a login page that does authentication before login. 
 If you sign up, Security is maintained by adding hashing to the password before saving it to the database 
 The dashboard has a logout option, a navbar, and the cards to represent all the available parts for sale
